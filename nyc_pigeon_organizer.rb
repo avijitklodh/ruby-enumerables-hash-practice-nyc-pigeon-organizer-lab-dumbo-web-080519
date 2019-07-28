@@ -1,8 +1,8 @@
-def nyc_pigeon_organizer(hash)
+def nyc_pigeon_organizer(data)
   # write your code here!
  final = {}
 
-  hash.each do |first_level, all_other|
+  data.each do |first_level, all_other|
     all_other.each do |category, array|
       array.each do |name|
         final[name] = {:color => [], :gender => [], :lives => []}
@@ -11,7 +11,7 @@ def nyc_pigeon_organizer(hash)
   end 
   
   x = final.keys
-  hash[:color].each do |bird_color, name|
+  data[:color].each do |bird_color, name|
     name.each do |bird_name|
       x.each do |item|
         if bird_name === item
@@ -21,7 +21,7 @@ def nyc_pigeon_organizer(hash)
     end 
   end 
  
-  hash[:gender].each do |gender, type|
+  data[:gender].each do |gender, type|
     type.each do |bird_name|
       x.each do |item|
         if bird_name === item
@@ -31,7 +31,7 @@ def nyc_pigeon_organizer(hash)
     end 
   end 
 
-  hash.each do |location, name|
+  data.each do |location, name|
     name.each do |bird_name|
       x.each do |item|
         if bird_name === item
