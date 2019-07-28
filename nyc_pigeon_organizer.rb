@@ -9,11 +9,11 @@ def nyc_pigeon_organizer (data)
     end 
   end 
   x = organized_pigeon.keys
-  data[:color].each do |bird_color, name|
-    name.each do |bird_name|
+  data[:color].each do |color, color_name|
+    color_name.each do |bird_name|
       x.each do |item|
         if bird_name === item
-          organized_pigeon[item][:color] << bird_color.to_s
+          organized_pigeon[item][:color] << color.to_s
         end 
       end 
     end 
