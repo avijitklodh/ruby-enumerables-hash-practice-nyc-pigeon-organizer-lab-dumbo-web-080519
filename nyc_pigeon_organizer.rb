@@ -1,10 +1,10 @@
 def nyc_pigeon_organizer (data)
   organized_pigeon = {}
 
-  data.each do |first_level, all_other|
-    all_other.each do |category, array|
-      array.each do |name|
-        organized_pigeon[name] = {:color => [], :gender => [], :lives => []}
+  data.each do |key, value|
+    value.each do |key_2, array|
+      array.each do |names|
+        organized_pigeon[names] = {:color => [], :gender => [], :lives => []}
       end 
     end 
   end 
